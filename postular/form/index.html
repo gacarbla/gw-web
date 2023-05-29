@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!--  Etiquetas meta  -->
+  <meta charset="UTF-8">
+
+  <!--  SEO meta  -->
+  <meta property="og:type" content="website">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GW Page">
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
+  <!--  Ajustes meta  -->
+  <meta property="og:locale" content="es-ES">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Hojas de estilo  -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../../css/loader.css">
+
+  <!--  Scripts  -->
+  <script src="./script.js"></script>
+  <script src="../../js/classes.js"></script>
+
+  <!--  Título  -->
+  <title>Postulaciones al staff de GW</title>
+
+</head>
+
+<body id="body">
+  <script>
+    // Antes de cargar el resto de la página, carga el loader
+    const generalLoader = new loader()
+  </script>
+  <!-- Contenido general, este div es el que contiene todos los elementos de la página -->
+  <div>
+    <div>
+      <h1>Postulaciones al Staff de GW</h1>
+    </div>
+    <form>
+      <div>
+        <div>
+          <h3>Queremos conocerte</h3>
+        </div>
+        <div>
+          <div class="input">
+            <label for="name">Nombre <span class="optional">(Opcional)</span></label>
+            <input type="text" autocomplete="name" id="name">
+          </div>
+          <div class="input">
+            <label for="age">Año de nacimiento<span class="mandatory">*</span></label>
+            <input type="number" max="2020" min="1980" id="age" autocomplete="bday-year" required>
+          </div>
+        </div>
+        <div>
+          <div class="input">
+            <label for="dispo">Disponibilidad horaria<span class="mandatory">*</span></label>
+            <input type="text" id="dispo" required>
+          </div>
+          <div class="list">
+            <label for="country">País<span class="mandatory">*</span></label>
+            <input list="paises" type="text" required id="country">
+            <datalist id="paises"></datalist>
+          </div>
+        </div>
+        <div>
+          <div class="input">
+            <label for="dispos">¿En qué dispositivos moderas?<span class="mandatory">*</span></label>
+            <input type="text" id="dispos">
+          </div>
+          <div class="input">
+            <label for="exp">¿Tienes experiencia en la moderación?<span class="mandatory">*</span></label>
+            <input type="text" id="exp">
+          </div>
+        </div>
+      </div>
+
+      <!-- Preguntas complejas a cerca de él/ella -->
+
+      <div class="q">
+        <div>
+          <div class="text">
+            <label for="def">¿Cuál crees que es tu mayor defecto? ¿Crees que esto puede afectar a tu rendimiento? Desarrolla tu respuesta.<span class="mandatory">*</span></label>
+            <textarea id="def"></textarea>
+          </div>
+        </div>
+        <div>
+          <div class="text">
+            <label for="mad">¿Te consideras una persona madura? Independientemente de la respuesta, ¿por qué?<span class="mandatory">*</span></label>
+            <textarea id="mad"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- A CERCA DEL SERVIDOR -->
+
+      <div class="q">
+        <div>
+          <h3>A cerca del servidor</h3>
+        </div>
+        <div>
+          <div class="text">
+            <label for="staff">¿Qué opinas de nuestro equipo staff actual? ¿En qué crees que podría mejorar?<span class="mandatory">*</span></label>
+            <textarea id="staff"></textarea>
+          </div>
+        </div>
+        <div>
+          <div class="text">
+            <label for="defectoserver">¿Cuál crees que es el mayor defecto del servidor actualmente? ¿Cómo crees que podría mejorar? ¿Qué puedes hacer tú, como usuario, para colaborar con esto?<span class="mandatory">*</span></label>
+            <textarea id="defectoserver"></textarea>
+          </div>
+        </div>
+        <div class="select multiple">
+          <p>¿Cuál es el objetivo de #media?<span class="mandatory">*</span><br><small>Selecciona una o más opciones.</small></p>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="mediach1" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="mediach1">Mandar memes.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="mediach2" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="mediach2">Enviar multimedia y mantener conversaciones en base a ella.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="mediach3" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="mediach3">Mandar multimedia sobre cosas aleatorias.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="mediach4" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="mediach4">Otro.</label>
+          </div>
+        </div>
+        <div class="select one">
+          <p>¿A partir de qué niveles puedes adjuntar media en el chat general?<span class="mandatory">*</span><br><small>Selecciona una única opción.</small></p>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="lvlmedia1" type="radio" name="lvlmedia">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="lvlmedia1">35</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="lvlmedia2" type="radio" name="lvlmedia">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="lvlmedia2">50</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="lvlmedia3" type="radio" name="lvlmedia">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="lvlmedia3">75</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="lvlmedia4" type="radio" name="lvlmedia">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="lvlmedia4">Ninguno de los anteriores</label>
+          </div>
+        </div>
+        <div class="select one">
+          <p>Entre las siguientes posibles definiciones de spam, sólo hay una correcta:<span class="mandatory">*</span><br><small>Selecciona una única opción.</small></p>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="spamopt1" type="radio" name="spam">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="spamopt1">Se considera spam enviar mensajes de texto que contienen una gran cantidad de carácteres.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="spamopt2" type="radio" name="spam">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="spamopt2">Spam es enviar de manera masiva o repetitiva un mismo mensaje.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="spamopt3" type="radio" name="spam">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="spamopt3">Hacer spam es realizar una promoción no autorizada de tu servidor, red social, grupo, etc.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="spamopt4" type="radio" name="spam">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="spamopt4">Spam es el correo basura que me llega al e-mail todos los días.</label>
+          </div>
+        </div>
+        <div class="select multiple">
+          <p>¿Cuáles de las siguientes normas no se encuentran vigentes en el servidor?<span class="mandatory">*</span><br><small>Selecciona una o más opciones.</small></p>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="nomrsopt1" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="nomrsopt1">Los usuarios no pueden insultar en canales públicos.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="nomrsopt2" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="nomrsopt2">Los usuarios deben ser mayores de 13 años para estar en la comunidad.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="nomrsopt3" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="nomrsopt3">Los usuarios que mencionen (hagan "ping") a Capitán Gato serán baneados.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="nomrsopt4" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="nomrsopt4">Está permitida la autopromoción si no se muestra el nombre de usuario o link en el chat.</label>
+          </div>
+        </div>
+        <div class="select multiple">
+          <p>¿Cuál de estos canales crees que es el más apto para que una persona nueva tome una noción básica de la comunidad?<span class="mandatory">*</span><br><small>Selecciona una o más opciones.</small></p>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="recomchopt1" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="recomchopt1">El canal de reglas.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="recomchopt2" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="recomchopt2">El canal de información.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="recomchopt3" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="recomchopt3">#aquí-habla-gato</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="recomchopt4" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="recomchopt4">El chat general.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="recomchopt5" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="recomchopt5">Canal de anuncios.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="recomchopt6" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="recomchopt6">El canal de #roles para personalizar tu perfil.</label>
+          </div>
+        </div>
+
+        <div class="select one">
+          <p>Para reportar a alguien, la opción más correcta es:<span class="mandatory">*</span><br><small>Selecciona una única opción.</small></p>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="goodreportopt1" type="radio" name="goodreport">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="goodreportopt1">Abrir un ticket en la categoría "general".</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="goodreportopt2" type="radio" name="goodreport">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="goodreportopt2">Escribirle a un miembro del equipo staff por privado.</label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="goodreportopt3" type="radio" name="goodreport">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for="goodreportopt3">Mencionar a un moderador en el chat general.</label>
+          </div>
+        </div>
+        
+        <div>
+          <div class="short">
+            <label for="gatoping">¿Qué ocurre si mencionas a Capitán Gato en 💬・general? Investiga.<span class="mandatory">*</span></label>
+            <input type="text" ud="gatoping">
+          </div>
+        </div>
+      </div>
+
+      <!-- SITUACIONES -->
+
+      <div class="q">
+        <div>
+          <h3>Situaciones</h3>
+        </div>
+        <div>
+          <div class="text">
+            <label for="sit1">¿Cuál sería tu reacción si múltiples usuarios empiezan a inundar el chat con mensajes sin sentido de manera descontrolada?<span class="mandatory">*</span><br><small><b>Aclaración:</b> Este caso no sería una raid. No debe interpretarse como tal.</small></label>
+            <textarea id="sit1"></textarea>
+          </div>
+        </div>
+        <div>
+          <div class="text">
+            <label for="sit2">Un usuario está entrando reiteradas veces con multicuentas al servidor pese a haber sido vetado por toxicidad, ¿qué puede hacer un moderador en esta situación?<span class="mandatory">*</span><br><small>¡Recuerda que los supervisores tienen permiso para vetar!</small></label>
+            <textarea id="sit2"></textarea>
+          </div>
+        </div>
+        <div>
+          <div class="text">
+            <label for="sit3"> Salen dos casos, solo puedes atender uno: el primero es un usuario insultando de manera masiva a cualquiera que se encuentre; el otro es una chica la cual está siendo menospreciada y fastidiada por otros usuario por una discapacidad que tiene. ¿Cuál de estos casos atenderías y por qué?<span class="mandatory">*</span></label>
+            <textarea id="sit3"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- DISCORD -->
+      
+      <div class="q">
+        <div>
+          <h3>Discord</h3>
+        </div>
+        <div>
+          <div class="text">
+            <label for="tos">¿Has leído los Términos del Servicio de Discord? Si es así, resalta qué es lo que piensas que es más importante y por qué.<span class="mandatory">*</span></label>
+            <textarea id="tos"></textarea>
+          </div>
+        </div>
+        <div>
+          <div class="text">
+            <label for="cg">¿Te has leído las Community Guidelines de Discord? Si es así, nuevamente, indica qué es lo más relevante dentro del documento.<span class="mandatory">*</span></label>
+            <textarea id="cg"></textarea>
+          </div>
+        </div>
+        <div>
+          <div class="text">
+            <label for="mod">¿Cuál es el cometido de un moderador dentro de Discord?<span class="mandatory">*</span></label>
+            <textarea id="mod"></textarea>
+          </div>
+        </div>
+        <div>
+          <div class="text">
+            <label for="buenaspracticas">¿Qué son las "buenas prácticas"? ¿Cómo se pueden aplicar a la hora de moderar?<span class="mandatory">*</span></label>
+            <textarea id="buenaspracticas"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMENTARIOS -->
+
+      <div class="q">
+        <div>
+          <h3>Comentarios</h3>
+        </div>
+        <div>
+          <div class="text">
+            <label for="coment">¿Hay algo que nos quieras decir?<span class="mandatory">*</span></label>
+            <textarea id="coment"></textarea>
+          </div>
+        </div>
+      </div>
+
+        <!--
+        <div>
+          <div class="text">
+            <label for=""><span class="mandatory">*</span></label>
+            <textarea id=""></textarea>
+          </div>
+        </div>
+        -->
+
+        <!--
+        <div class="select one">
+          <p><span class="mandatory">*</span><br><small>Selecciona una única opción.</small></p>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="" type="radio" name="">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for=""></label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="" type="radio" name="">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for=""></label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="" type="radio" name="">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for=""></label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="" type="radio" name="">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for=""></label>
+          </div>
+        </div>
+
+      -->
+
+        <!--
+        <div class="select multiple">
+          <p><span class="mandatory">*</span><br><small>Selecciona una o más opciones.</small></p>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for=""></label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for=""></label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for=""></label>
+          </div>
+          <div>
+            <div class="content">
+              <label class="checkBox">
+                <input id="" type="checkbox">
+                <div class="transition"></div>
+              </label>
+            </div>
+            <label for=""></label>
+          </div>
+        </div>
+
+      -->
+
+
+      <!--
+        <div>
+          <div class="short">
+            <label for="media"><span class="mandatory">*</span></label>
+            <input type="text">
+          </div>
+        </div>
+      -->
+
+      <!-- FINAL -->
+
+      <div>
+        <div>
+          <h3>Antes de terminar...</h3>
+        </div>
+        <div>
+          <div>
+            <label class="check">
+              <label class="container">
+                <input type="checkbox">
+                <svg viewBox="0 0 64 64">
+                  <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                </svg>
+              </label>
+              <p>Me he informado y cumplo los requisitos para ser staff.<span class="mandatory">*</span></p>
+            </label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="check">
+              <label class="container">
+                <input type="checkbox">
+                <svg viewBox="0 0 64 64">
+                  <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                </svg>
+              </label>
+              <p>He revisado mi entrevista y estoy enviando un formulario sin faltas de ortografía, coherente y
+                formal.<span class="mandatory">*</span></p>
+            </label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="check">
+              <label class="container">
+                <input type="checkbox">
+                <svg viewBox="0 0 64 64">
+                  <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                </svg>
+              </label>
+              <p>Todo lo que he escrito aquí ha sido de forma sincera lo que creo.<span class="mandatory">*</span></p>
+            </label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="check">
+              <label class="container">
+                <input type="checkbox">
+                <svg viewBox="0 0 64 64">
+                  <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                </svg>
+              </label>
+              <p>He completado este formulario con la ayuda de alguna inteligencia artificial. <span class="optional">(Opcional)</span></p>
+            </label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <label class="check">
+              <label class="container">
+                <input type="checkbox" id="staffhelpcheck">
+                <svg viewBox="0 0 64 64">
+                  <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                </svg>
+              </label>
+              <p>He respondido alguna pregunta con la ayuda de un miembro del equipo del staff. <span class="optional">(Opcional)</span></p>
+            </label>
+          </div>
+        </div>
+        <div>
+          <div class="shorter" id="staffhelpdiv" style="opacity: 0; visibility: hidden; height: 0px;">
+            <label for="staffhelp">¿Cómo se llama el/los staff?<span class="mandatory">*</span></label>
+            <input type="text" id="staffhelp">
+          </div>
+        </div>
+        <div>
+          <h3>...la sinceridad es esencial.</h3>
+        </div>
+      </div>
+      <!--
+      <input type="submit"><input type="reset">
+      -->
+    </form>
+  </div>
+</body>
+
+</html>

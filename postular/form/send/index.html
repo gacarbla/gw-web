@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!--  Etiquetas meta  -->
+  <meta charset="UTF-8">
+
+  <!--  SEO meta  -->
+  <meta property="og:type" content="website">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GW Page">
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
+  <!--  Ajustes meta  -->
+  <meta property="og:locale" content="es-ES">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  Hojas de estilo  -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../../../css/loader.css">
+
+  <!--  Scripts  -->
+  <script src="./script.js"></script>
+  <script src="../../../js/classes.js"></script>
+
+  <!--  Título  -->
+  <title>¡Éxito!</title>
+
+</head>
+
+<body id="body">
+  <script>
+    // Antes de cargar el resto de la página, carga el loader
+    const generalLoader = new loader()
+  </script>
+  <div id="success" style="opacity: 0; visibility: hidden;">
+    <h1>¡Éxito!</h1>
+    <p>Has iniciado sesión como <span class="username" id="user_username"></span></p>
+    <button>Enviar formulario</button>
+  </div>
+  <div id="error" style="opacity: 0; visibility: hidden;">
+    <h1>¡Oh no!</h1>
+    <p>Algo ha fallado y no se ha podido iniciar sesión.</p>
+    <button onclick="window.location = 'https://discord.com/api/oauth2/authorize?client_id=1109945400066060399&redirect_uri=http%3A%2F%2F127.0.0.1%3A5500%2Fpostular%2Fform%2Fsend%2F&response_type=token&scope=identify%20guilds%20email'">Volver a intentar</button>
+  </div>
+</body>
+
+</html>

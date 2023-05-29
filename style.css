@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.cdnfonts.com/css/whitney-2');
+
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+*:not(.font) {
+    font-family: whitney, Arial;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.header button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    letter-spacing: 1px;
+    padding: 5px 5px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+}
+
+.header button.disabled {
+    cursor: not-allowed;
+}
+
+.header button.discord {
+    padding: 0px 50px;
+    font-size: 15px;
+    margin: 0px;
+    font-weight: bold;
+    position: absolute;
+    overflow: hidden;
+}
+
+button.primary {
+    border: 2px solid #5865f2;
+    color: #5865f2;
+}
+
+button.primary:hover {
+    background-color: #5865f2;
+    color: #fff;
+}
+
+.discord svg {
+    height: 35px;
+    width: 50px;
+    fill: #5865f2;
+    transition: all 0.3s;
+    transform: scale(0.9);
+}
+
+button.discord:hover svg {
+    fill: #fff;
+}
+
+button.disabled {
+    border: 2px solid #ed4245;
+    color: #ed4245;
+}
+
+button.disabled:hover {
+    background-color: #ed4245;
+}
+
+.discord.disabled svg {
+    fill: #ed4245;
+}
+
+.discord.session {
+    border: 2px solid #fff;
+    color: #fff;
+    width: 300px;
+    height: 50px;
+}
+
+.discord.session svg {
+    height: 35px;
+    width: 50px;
+    fill: #fff;
+    transition: all 0.3s;
+    transform: scale(0.9);
+}
+
+.discord.session:hover {
+    border: 2px solid #ed4245;
+    color: #ed4245;
+}
+
+.discord.session:hover svg {
+    height: 35px;
+    width: 50px;
+    fill: #ed4245;
+    transition: all 0.3s;
+    transform: scale(0.9);
+}
+
+.discord > p.up {
+    position: absolute;
+    left: 80px;
+    transition: all .3s;
+}
+
+.discord:hover > p.up {
+    position: absolute;
+    transform: translateY(100px);
+}
+
+.discord > p.down {
+    position: absolute;
+    left: 80px;
+    bottom: 0px;
+    transition: all .3s;
+    transform: translateY(-100px);
+}
+
+.discord:hover > p.down {
+    position: absolute;
+    left: 80px;
+    transform: translateY(0px);
+}
+
+.useravatar {
+    height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    left: 30px;
+}
+
+
+
+
+
+
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #fff;
+    background: url("https://unblast.com/wp-content/uploads/2021/01/Space-Background-Image-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+div.header {
+    z-index: 700;
+    background-color: #0008;
+    width: calc(100vw - 100px);
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+div.profile p.title {
+    position: absolute;
+    font-size: 100px;
+    bottom: calc(50vh - 60px);
+    padding: 0px;
+    margin: 0px;
+    font-family: whitney;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    color: #fff;
+    left: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: 300px;
+}
+div.box {
+    background-color: #026464;
+    background: linear-gradient(to bottom, #836dc0, #574389);
+    min-height: 1200px;
+    width: 1200px;
+    transform: rotateZ(-45deg);
+    border-radius: 60px;
+    left: -600px;
+    top: -180px;
+    position: absolute;
+    box-shadow: 0px 0px 25px -5px #000;
+}
+
+nav * {
+    margin: 0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    left: 0px;
+    gap: 40px;
+    top: 35px;
+    font-weight: bold;
+}
+
+nav li {
+    font-size: 30px;
+    color: #fff;
+}
+
+.btn {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    color: #1e1e2b;
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #fff;
+    -webkit-transition: .4s ease;
+    transition: .4s ease;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    height: 100%;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}
+
+.hidden {
+    visibility: hidden;
+}

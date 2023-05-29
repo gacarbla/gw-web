@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.cdnfonts.com/css/whitney-2');
+
+:root {
+
+    /* TÍTULOS ---------- */
+
+        /* H1 */
+        --título-h1-fuente-tamaño: 52px;
+        --título-h1-separador-color: #fff4;
+        --título-h1-separador-grosor: 3px;
+
+        /* H2 */
+        --título-h2-fuente-tamaño: 45px;
+        --título-h2-separador-color: transparent;
+        --título-h2-separador-grosor: 0px;
+
+        /* H3 */
+        --título-h3-fuente-tamaño: 32px;
+        --título-h3-separador-color: transparent;
+        --título-h3-separador-grosor: 0px;
+
+
+
+    /* TEXTO ------------ */
+
+    --texto-fuente-tamaño: 20px;
+
+        /* PREDETERMINADO */
+        --texto-fuente-color: #fff;
+
+        /* ROJO */
+        --texto-fuente-color-rojo: #ed4245;
+        --texto-fondo-color-rojo: #ed424510;
+
+        /* AMARILLO */
+        --texto-fuente-color-amarillo: #fee528;
+        --texto-fondo-color-amarillo: #fee52810;
+
+        /* AZUL */
+        --texto-fuente-color-azul: #5865f2;
+        --texto-fondo-color-azul: #5865f210;
+
+        /* VERDE */
+        --texto-fuente-color-verde: #57f287;
+        --texto-fondo-color-verde: #57f28710;
+
+        /* GRIS */
+        --texto-fuente-color-gris: #aaa;
+        --texto-fondo-color-gris: #aaa1;
+
+
+
+    /* LINKS ------------ */
+
+    --a-color: #fff;
+    --a-link-color: #5865f2;
+    --a-visited-color: #5865f2;
+    --a-hover-color: #58c4f2;
+
+
+    /* IMG -------------- */
+
+    --img-width: 70%;
+    --img-border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+*:not(.font) {
+    font-family: whitney, Arial;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.header button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    letter-spacing: 1px;
+    padding: 5px 5px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+}
+
+.header button.disabled {
+    cursor: not-allowed;
+}
+
+.header button.discord {
+    padding: 0px 50px;
+    font-size: 15px;
+    margin: 0px;
+    font-weight: bold;
+    position: fixed;
+    overflow: hidden;
+    background-color: #0005;
+}
+
+button.primary {
+    border: 2px solid #5865f2;
+    color: #5865f2;
+}
+
+button.primary:hover {
+    background-color: #5865f2;
+    color: #fff;
+}
+
+.discord svg {
+    height: 35px;
+    width: 50px;
+    fill: #5865f2;
+    transition: all 0.3s;
+    transform: scale(0.9);
+}
+
+button.discord:hover svg {
+    fill: #fff;
+}
+
+button.disabled {
+    border: 2px solid #ed4245;
+    color: #ed4245;
+}
+
+button.disabled:hover {
+    background-color: #ed4245;
+}
+
+.discord.disabled svg {
+    fill: #ed4245;
+}
+
+.discord.session {
+    border: 2px solid #fff;
+    color: #fff;
+    width: 300px;
+    height: 50px;
+}
+
+.discord.session svg {
+    height: 35px;
+    width: 50px;
+    fill: #fff;
+    transition: all 0.3s;
+    transform: scale(0.9);
+}
+
+.discord.session:hover {
+    border: 2px solid #ed4245;
+    color: #ed4245;
+}
+
+.discord.session:hover svg {
+    height: 35px;
+    width: 50px;
+    fill: #ed4245;
+    transition: all 0.3s;
+    transform: scale(0.9);
+}
+
+.discord > p.up {
+    position: absolute;
+    left: 80px;
+    transition: all .3s;
+}
+
+.discord:hover > p.up {
+    position: absolute;
+    transform: translateY(100px);
+}
+
+.discord > p.down {
+    position: absolute;
+    left: 80px;
+    bottom: 0px;
+    transition: all .3s;
+    transform: translateY(-100px);
+}
+
+.discord:hover > p.down {
+    position: absolute;
+    left: 80px;
+    transform: translateY(0px);
+}
+
+.useravatar {
+    height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    left: 30px;
+}
+
+
+
+
+
+
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 400px;
+    background-color: #fff;
+    background: url("https://unblast.com/wp-content/uploads/2021/01/Space-Background-Image-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.header {
+    z-index: 700;
+    width: calc(100vw - 100px);
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+div.profile p.title {
+    position: absolute;
+    font-size: 100px;
+    bottom: 70px;
+    padding: 0px;
+    margin: 0px;
+    font-family: whitney;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    color: #fff;
+    left: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.profile p.sub {
+    position: absolute;
+    font-size: 30px;
+    bottom: 30px;
+    padding: 0px;
+    margin: 0px;
+    font-family: whitney;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    color: #fff;
+    left: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .5;
+}
+
+nav * {
+    margin: 0px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    left: 0px;
+    gap: 40px;
+    top: 35px;
+    font-weight: bold;
+}
+
+nav li {
+    font-size: 30px;
+    color: #fff;
+}
+
+.btn {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    color: #1e1e2b;
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #fff;
+    -webkit-transition: .4s ease;
+    transition: .4s ease;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    height: 100%;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+div.content {
+    position: absolute;
+    top: 400px;
+    left: 0px;
+    right: 0px;
+    background-color: #1a1b23;
+    padding: 20px 120px;
+    color: #fff;
+    padding-bottom: 200px;
+}
+
+div.content h1 {
+    font-size: var(--título-h1-fuente-tamaño);
+    border-bottom: var(--título-h1-separador-grosor) solid var(--título-h1-separador-color);
+}
+div.content h2 {
+    font-size: var(--título-h2-fuente-tamaño);
+    border-bottom: var(--título-h2-separador-grosor) solid var(--título-h2-separador-color);
+}
+div.content h3 {
+    font-size: var(--título-h3-fuente-tamaño);
+    border-bottom: var(--título-h3-separador-grosor) solid var(--título-h3-separador-color);
+}
+div.content p{
+    font-size: var(--texto-fuente-tamaño);
+}
+div.content img{
+    width: var(--img-width);
+    margin: 40px calc( (100% - var(--img-width))/2 );
+    position: relative;
+    border-radius: 5px;
+}
+div.content ul{
+    font-size: 20px;
+}
+div.content ol{
+    font-size: 20px;
+}
+div.content a{
+    color: var(--a-color);
+}
+div.content a:visited{
+    color: var(--a-visited-color);
+}
+div.content a:link{
+    color: var(--a-link-color);
+}
+div.content a:hover{
+    color: var(--a-hover-color);
+}
+
+div.content p.r {
+    color: var(--texto-fuente-color-rojo);
+    border-left: 5px solid var(--texto-fuente-color-rojo);
+    padding: 5px 10px;
+    background-color: var(--texto-fondo-color-rojo);
+}
+
+div.content p.y {
+    color: var(--texto-fuente-color-amarillo);
+    border-left: 5px solid var(--texto-fuente-color-amarillo);
+    padding: 5px 10px;
+    background-color: var(--texto-fondo-color-amarillo);
+}
+
+div.content p.b {
+    color: var(--texto-fuente-color-azul);
+    border-left: 5px solid var(--texto-fuente-color-azul);
+    padding: 5px 10px;
+    background-color: var(--texto-fondo-color-azul);
+}
+
+div.content p.g {
+    color: var(--texto-fuente-color-verde);
+    border-left: 5px solid var(--texto-fuente-color-verde);
+    padding: 5px 10px;
+    background-color: var(--texto-fondo-color-verde);
+}
+
+div.content p.x {
+    color: var(--texto-fuente-color-gris);
+    border-left: 5px solid var(--texto-fuente-color-gris);
+    padding: 5px 10px;
+    background-color: var(--texto-fondo-color-gris);
+}
+
+div.content div.space {
+    height: 100px;
+}
+div.content button {
+    background-color: transparent;
+    border: 2px solid #bbb;
+    color: #bbb;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 15px 0px;
+    cursor: pointer;
+    transition: all .3s;
+}
+div.content button:hover {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #000;
+}
+
+div.content button.pri {
+    background-color: #5865f2;
+    border: 2px solid #5865f2;
+    color: #fff;
+}
+div.content button.pri:hover {
+    background-color: #4350db;
+    border: 2px solid #4350db;
+    color: #fff;
+}
+
+div.content button.sec {
+    background-color: #3e3f45;
+    border: 2px solid #3e3f45;
+    color: #fff;
+}
+div.content button.sec:hover {
+    background-color: #6d6f78;
+    border: 2px solid #6d6f78;
+    color: #fff;
+}
+
+div.content button.dan {
+    background-color: #ed4245;
+    border: 2px solid #ed4245;
+    color: #fff;
+}
+div.content button.dan:hover {
+    background-color: #ba3336;
+    border: 2px solid #ba3336;
+    color: #fff;
+}
+
+div.content button.suc {
+    background-color: #44bf6a;
+    border: 2px solid #44bf6a;
+    color: #fff;
+}
+div.content button.suc:hover {
+    background-color: #318c4d;
+    border: 2px solid #318c4d;
+    color: #fff;
+}
+div.content button:disabled {
+    opacity: .5;
+    cursor: default;
+}

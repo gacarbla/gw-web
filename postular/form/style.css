@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.cdnfonts.com/css/whitney-2');
+
+:root {
+
+    /* TÍTULOS ---------- */
+
+    /* H1 */
+    --título-h1-fuente-tamaño: 52px;
+    --título-h1-separador-color: #fff4;
+    --título-h1-separador-grosor: 3px;
+
+    /* H2 */
+    --título-h2-fuente-tamaño: 45px;
+    --título-h2-separador-color: transparent;
+    --título-h2-separador-grosor: 0px;
+
+    /* H3 */
+    --título-h3-fuente-tamaño: 32px;
+    --título-h3-separador-color: transparent;
+    --título-h3-separador-grosor: 0px;
+
+
+
+    /* TEXTO ------------ */
+
+    --texto-fuente-tamaño: 20px;
+
+    /* PREDETERMINADO */
+    --texto-fuente-color: #fff;
+
+    /* ROJO */
+    --texto-fuente-color-rojo: #ed4245;
+    --texto-fondo-color-rojo: #ed424510;
+
+    /* AMARILLO */
+    --texto-fuente-color-amarillo: #fee528;
+    --texto-fondo-color-amarillo: #fee52810;
+
+    /* AZUL */
+    --texto-fuente-color-azul: #5865f2;
+    --texto-fondo-color-azul: #5865f210;
+
+    /* VERDE */
+    --texto-fuente-color-verde: #57f287;
+    --texto-fondo-color-verde: #57f28710;
+
+    /* GRIS */
+    --texto-fuente-color-gris: #aaa;
+    --texto-fondo-color-gris: #aaa1;
+
+
+
+    /* LINKS ------------ */
+
+    --a-color: #fff;
+    --a-link-color: #5865f2;
+    --a-visited-color: #5865f2;
+    --a-hover-color: #58c4f2;
+
+
+    /* IMG -------------- */
+
+    --img-width: 70%;
+    --img-border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+*:not(.font) {
+    font-family: whitney, Arial;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+body>div {
+    background-color: #5865f2;
+    background: url("https://unblast.com/wp-content/uploads/2021/01/Space-Background-Image-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+body>div>div {
+    color: #fff;
+    font-size: 42px;
+    margin: 0px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+form {
+    background-color: #f1f3f5;
+    padding: 120px 80px;
+    color: #000;
+    width: 70%;
+    border-radius: 15px;
+    margin: 160px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+}
+
+form>div.q {
+    gap: 80px;
+}
+
+form>div>div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+form>div>div>div {
+    width: 100%;
+}
+
+form>div>div>div>label {
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+form label.check {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+span.mandatory {
+    color: #f00;
+    font-weight: bold;
+}
+
+span.optional {
+    color: #888;
+    font-size: 11px;
+}
+
+form input,
+form textarea {
+    cursor: pointer;
+}
+
+/* CHECKBOX */
+
+.container {
+    cursor: pointer;
+}
+
+.container input {
+    display: none;
+}
+
+.container svg {
+    height: 15px;
+    overflow: visible;
+}
+
+.path {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+    stroke-dasharray: 241 9999999;
+    stroke-dashoffset: 0;
+}
+
+.container input:checked~svg .path {
+    stroke-dasharray: 70.5096664428711 9999999;
+    stroke-dashoffset: -262.2723388671875;
+}
+
+
+/* -------------------- */
+
+.input>input,
+.list>input,
+.short>input {
+    cursor: text;
+    outline: none;
+    padding: 10px 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #c8c8c8;
+    width: calc(100% - 20px);
+    min-width: 200px;
+    font-size: 15px;
+}
+
+.input>input:disabled,
+.list>input:disabled,
+.short>input:disabled {
+    outline: none;
+    padding: 10px 10px;
+    border: 2px solid #bbb;
+    border-radius: 5px;
+    background-color: #f1f3f5;
+    width: calc(100% -20px);
+    min-width: 200px;
+    font-size: 15px;
+    color: #bbb;
+}
+
+div.input,
+div.list,
+div.short {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+div.shorter {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+    left: 50px;
+    transition: all .3s;
+}
+
+.shorter>input {
+    cursor: text;
+    outline: none;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #f1f2f3;
+    width: calc(50% - 20px);
+    min-width: 150px;
+    font-size: 15px;
+}
+
+.shorter>input:disabled {
+    outline: none;
+    padding: 10px 10px;
+    border: 2px solid #bbb;
+    border-radius: 5px;
+    background-color: #f1f3f5;
+    width: calc(100% -20px);
+    min-width: 200px;
+    font-size: 15px;
+    color: #bbb;
+}
+
+.shorter>label {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    cursor: text;
+    color: #000;
+    transition: all .3s;
+    position: relative;
+    font-size: 15px;
+    background-color: #f1f3f5;
+}
+
+div.input,
+div.list,
+div.short {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input>label,
+.list>label {
+    position: absolute;
+    left: 10px;
+    cursor: text;
+    top: 10px;
+    color: #000;
+    transition: all .3s;
+}
+
+.short>label {
+    left: 0px;
+    top: 0px;
+    cursor: text;
+    color: #000;
+    transition: all .3s;
+    position: relative;
+    font-size: 18px;
+    background-color: #f1f3f5;
+}
+
+.input.filled>label,
+.list.filled>label {
+    position: absolute;
+    left: 20px;
+    top: -12px;
+    font-size: 13px;
+    padding: 0px 10px;
+    background-color: #f1f3f5;
+}
+
+div.error>label {
+    color: #ed4245;
+}
+
+div.error>input {
+    color: #ed4245;
+    border-color: #ed4245;
+}
+
+.input.filled>input,
+.list.filled>input,
+.short>input {
+    background-color: #f1f3f5;
+}
+
+/* -------------------- */
+
+div.text {
+    height: auto;
+}
+
+.text>textarea {
+    cursor: text;
+    outline: none;
+    padding: 10px 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #f1f3f5;
+    width: calc(100% - 20px);
+    min-width: 200px;
+    height: 80px;
+    font-size: 15px;
+    resize: none;
+}
+
+.text>textarea:disabled {
+    outline: none;
+    padding: 10px 10px;
+    border: 2px solid #bbb;
+    border-radius: 5px;
+    background-color: #f1f3f5;
+    width: calc(100% -20px);
+    max-width: 500px;
+    min-width: 200px;
+    font-size: 15px;
+    color: #bbb;
+}
+
+.text>label {
+    font-size: 18px;
+    cursor: default;
+    color: #000;
+    transition: all .3s;
+}
+
+div.error>label {
+    color: #ed4245;
+}
+
+div.error>textarea {
+    color: #ed4245;
+    border-color: #ed4245;
+}
+
+/* select sections */
+
+div.select {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+div.select small {
+    opacity: .6;
+    font-size: 14px;
+    font-style: italic;
+}
+
+div.select > p {
+    font-size: 18px;
+}
+
+div.select > div {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.clear {
+    clear: both;
+}
+
+.checkBox {
+    display: block;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000;
+    border-radius: 2.5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 2px #fff;
+}
+
+.checkBox div {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    top: -52px;
+    left: -52px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    z-index: 100;
+}
+
+.checkBox input[type=checkbox]:checked+div {
+    left: -10px;
+    top: -10px;
+}
+
+.checkBox input[type=checkbox] {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+}
+
+.checkBox input[type=radio]:checked+div {
+    left: -10px;
+    top: -10px;
+}
+
+.checkBox input[type=radio] {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+}
+
+.transition {
+    transition: 300ms ease;
+}
